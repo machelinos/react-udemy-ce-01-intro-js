@@ -9,7 +9,7 @@ export const findHeroById = (heroes, id) => {
 }
 // console.log(findHeroById(heroes, 3))
 
-const findHeroesByOwner = (heroes, owner) => {
+export const findHeroesByOwner = (heroes, owner) => {
   return heroes.filter((hero) => hero.owner === owner)
 }
 
