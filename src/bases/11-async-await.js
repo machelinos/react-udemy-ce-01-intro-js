@@ -1,19 +1,17 @@
-const getImagen = async () => {
+export const getImagen = async () => {
   const apiKey = 'K2bFwNaKbTtfO37edtMPd4E4uwNmOBvK'
   try {
     const fetchResp = await fetch(
       `https://api.giphy.com/v1/gifs/random?api_key=${apiKey}`,
     )
-
     const { data } = await fetchResp.json()
-
     return data.images.original.url
   } catch (error) {
     return null
   }
 }
 
-const showImg = async () => {
+/* const showImg = async () => {
   try {
     const imgUrl = await getImagen()
     if (imgUrl) {
@@ -24,6 +22,6 @@ const showImg = async () => {
   } catch (error) {
     console.warn(error)
   }
-}
+} */
 
-showImg()
+// showImg()
