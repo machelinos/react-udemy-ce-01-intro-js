@@ -1,5 +1,5 @@
 import { findHeroById } from './08-imports-exports'
-import heroes from '../data/heroes'
+// import heroes from '../data/heroes'
 
 /* const promise = new Promise((resolve, reject) => {
   setTimeout(() => {
@@ -12,7 +12,7 @@ promise.then((hero) => {
   console.log(hero)
 }) */
 
-const getHeroByIdAsync = (heroes, id) => {
+export const getHeroByIdAsync = (heroes, id) => {
   return new Promise((resolve, reject) => {
     const hero = findHeroById(heroes, id)
     if (hero) {
@@ -23,4 +23,4 @@ const getHeroByIdAsync = (heroes, id) => {
   })
 }
 
-getHeroByIdAsync(heroes, 3).then(console.log).catch(console.warn)
+// getHeroByIdAsync(heroes, 3).then(console.log).catch(console.warn)
